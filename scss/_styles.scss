@@ -1,0 +1,450 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    
+
+}
+
+
+
+// html {
+//     scroll-behavior: smooth;
+// }
+  
+
+.container{
+   background-image: url('../img/Background-1.png');
+   background-size: cover; 
+   background-position: center;
+   height: 100vh;
+   padding: 0 50px;
+
+   @media #{$mediaTablet}{
+    background-image: none;
+    padding: 0 13px
+   }
+
+}
+
+.header{
+    max-width: 200px;
+    padding: 30px 0;
+    @media #{$mediaTablet}{
+        padding: 15px 0 15px 0;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .main-content {
+      flex-wrap: wrap;
+    }
+    .main-content__table2{
+      flex-wrap: wrap;
+      display: block;
+        
+    }
+}
+
+.main-content{
+    display: flex;
+    position: relative;
+
+    
+
+    &__table1{
+        width: 50%;
+        height: 72vh;
+        display: flex;
+        flex-wrap: wrap;
+        @media #{$mediaTablet}{
+            width: 100%;
+            justify-content: center;
+        }
+
+        .title{
+            color: $color-green;            
+            font-size: 1.4rem;
+            font-family: 'CenturyGothicBold';
+            height: 35px;
+            margin-top: 20px 0;
+            @media #{$mediaTablet}{
+                font-size: 1rem;
+                
+            }
+            h1{
+                @media #{$mediaTablet}{
+                    margin: 0;
+                    
+                } 
+            }
+        }
+        .sub-content{
+            color:$color-grey;
+            font-family: 'Roboto-bold';
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            
+            @media #{$mediaDesktop}{
+                display: block;
+            }
+            @media #{$mediaTablet}{
+                display: none;
+                margin-top: 0;
+                text-align: center;
+            }
+
+            
+        }
+
+        .sub-content--mobile{
+            @media #{$mediaTablet}{
+                color:$color-grey;
+                font-family: 'Roboto-bold';
+                font-size: 15px ;
+                letter-spacing: 1px;
+                margin-top: -50px;
+                text-align: center;
+
+            }
+        }
+
+        .count {
+            display: flex;
+            align-items: center;
+
+            @media #{$mediaTablet}{
+                margin-top: -100px;
+            }
+
+            .count-numbers{
+                background: $color-yellow;
+                font-family: 'CenturyGothicBold';
+                width: 40px;
+                height: 55px;
+                color: white;
+                border-radius: 10px;
+                text-align: center;
+                vertical-align: center;
+                font-size: 45px;
+                margin: 5px 3px;
+
+                @media #{$mediaTablet}{
+                    width: 28px;
+                    height: 43px;
+                    font-size: 33px;
+                }
+
+                &--center{
+                    margin-left: 10px;
+                }
+            }           
+        }
+
+        .count > span {
+            color: $color-green;
+            font-size: 40px;
+            font-family: 'CenturyGothicBold';
+
+        }
+        
+
+        a{
+            text-decoration: none;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: row;
+            // margin-top: 180px;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 100%;
+            
+            @media #{$mediaTablet}{
+               display: none;
+            }
+
+            .link{
+               img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .box {
+                height: 10px;
+                width: 100px;
+                display: flex;
+                justify-content: space-around; 
+                margin-left: auto;
+            }
+            .page{
+                p{
+                    color: white;
+                    font-family: 'CenturyGothicBold';
+                    margin: 0;
+                    font-size: 12px;
+                    text-align: center;
+
+                }
+                img{
+                    width: 70px;
+                }
+            }
+        }
+
+
+
+    }
+
+    &__table2{
+        width: 50%;
+        display: flex;
+        @media #{$mediaTablet}{
+            width: 100%;
+        }
+
+        &--img{
+            // background: red;
+            height: 260px;
+            width: 220px;
+            position: relative;
+
+            @media #{$mediaTablet}{
+                display: none;
+            }
+
+            
+
+            .phone img{
+                position: absolute;
+                height: 100%;
+                width: 147px;
+                top: 50px;
+                left: 16px;
+                z-index: 1;
+
+            }
+            .illumination img {
+                position: absolute;
+                min-height: 496px;
+                max-width: 250px;
+                top: -104px;
+                right: -85px;
+                z-index: 0;
+                animation: fadein 6s;
+            }
+
+            .floor img {
+                position: absolute;
+                width: 512px;
+                height: 105px;
+                bottom: -132px;
+                left: 27px;
+            }
+        }
+
+        .form{
+            background: white;
+            width: 230px;
+            height: 150px;
+            padding: 8px 2px 15px 10px;
+            margin-top: 60px;
+            border-radius: 12px;
+            position: relative;
+            animation: fadein 10s;
+            z-index: 10000;
+
+            @media #{$mediaTablet}{
+                background: $color-green;
+                animation: fadein 1s;
+            }
+
+            &__title{
+                color: $color-green;
+                text-align: center;
+                font-family: 'CenturyGothicBold';
+
+                
+                @media #{$mediaTablet}{
+                    color: white
+                }
+
+                h2{
+                    margin-top: 0;
+                    margin-bottom: 4px;
+                }
+            }
+            &__terms{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 6px;
+                a{
+                    color: $color-green;
+                    font-family: 'CenturyGothic';
+                    text-align: center;
+                    justify-content: center;
+                    font-size: 7px;
+                    line-height: 2;
+                    text-decoration: none;
+                }
+            }
+
+            &__fields {
+                display: flex;
+                flex-wrap: wrap;
+                
+                input::placeholder{
+                    font-size: 10px
+                }
+                
+                .name{
+                    display: flex;
+                    
+                    input{
+                        width: 79%;
+                        flex-wrap: nowrap !important;
+                        font-size: 10px;
+                        margin-bottom: 3px;
+                        &:nth-last-of-type(2){
+                            margin-left: 0px;
+                        }                        
+                    }
+                }
+
+                input{
+                    background: $color-fields;
+                    border: none;
+                    border-radius: 6px;
+                    padding: 6px;
+                    margin: 5px;
+                    width: 100%;
+                    font-size: 10px;
+
+                }
+                .contact{
+                    width: 90%
+                }
+            }
+            .submit {
+                position: relative;
+
+                input{
+                    position: absolute;
+                    border: none;
+                    background: $color-yellow; 
+                    font-family: 'CenturyGothic';
+                    color: white;
+                    border-radius: 20px;
+                    padding: 8px 9px;
+                    width: 115px;
+                    left: 0;
+                    right: 0;
+                    margin: -3px auto;
+                    font-size: 9px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                                        
+                 }
+            }
+        }
+    }
+}
+
+.container2{
+    background-image: url(../img/Background-2.png);
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    overflow-y: hidden;
+
+    &__appLoro {
+        // background: yellow;
+        width: 600px;
+
+        .phoneLoro{
+            img{
+                max-width: 620px;
+               
+            }
+        }
+    }
+    &__description{
+        display: flex;
+        // align-self: flex-start;
+        // background: red;
+        flex-wrap: wrap;
+        max-width: 650px;    max-width: 650px;
+        
+
+        &--descriptionTitle{
+            color: $color-green;
+            font-size: 1.3rem;
+            line-height: 0.9;
+            font-family: 'CenturyGothicBold';
+        }
+        &--list{
+            box-sizing: content-box;
+            ul {               
+               list-style: none;  
+               padding: 0;                   
+              } 
+            li:before{
+                content: "";
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+                margin-right: 10px;
+                background-image: url(../img/check.svg);
+                animation: fadein 4s;
+
+                &:nth-of-type(1){
+                    animation: fadein 4s;
+                }
+                &:nth-of-type(2){
+                    animation: fadein 5s;
+                }
+                &:nth-of-type(3){
+                    animation: fadein 7 s;
+                }
+            }
+            li{
+                color: $color-grey;
+                font-size: 1rem;
+                line-height: 2;
+                letter-spacing: 0.5px;
+                font-family: 'Roboto-Regular';
+
+                &:nth-of-type(1){
+                    animation: aparece-izquierda ease 3s backwards;
+                }
+                &:nth-of-type(2){
+                    animation: aparece-izquierda ease 4s backwards;
+                }
+                &:nth-of-type(3){
+                    animation: aparece-izquierda ease 5s backwards;
+                }
+
+            }
+        }
+
+
+        
+    }
+    
+}
+@media only screen and (max-width: 1000px) {
+    .illumination {
+      display: none;
+    }
+}
