@@ -84,9 +84,10 @@ body, html {
         justify-content: center; } }
     .main-content__table1 .title {
       color: #00c196;
-      font-size: 1.4rem;
+      font-size: 1.7rem;
       font-family: 'CenturyGothicBold';
       height: 35px;
+      width: 100%;
       margin-top: 20px 0; }
       @media only screen and (max-width: 991px) {
         .main-content__table1 .title {
@@ -97,9 +98,10 @@ body, html {
     .main-content__table1 .sub-content {
       color: #636363;
       font-family: 'Roboto-bold';
-      font-size: 0.9rem;
+      font-size: 1.2rem;
       letter-spacing: 1px;
-      margin-top: 20px; }
+      margin-top: 45px;
+      width: 100%; }
       @media only screen and (max-width: 1199px) {
         .main-content__table1 .sub-content {
           display: block; } }
@@ -110,23 +112,27 @@ body, html {
           text-align: center; } }
     @media only screen and (max-width: 991px) {
       .main-content__table1 .sub-content--mobile {
+        display: block !important;
         color: #636363;
         font-family: 'Roboto-bold';
         font-size: 15px;
         letter-spacing: 1px;
-        margin-top: -50px;
+        margin-top: -100px;
         text-align: center; } }
+    @media only screen and (min-width: 1200px) {
+      .main-content__table1 .sub-content--mobile {
+        display: none; } }
     .main-content__table1 .count {
       display: flex;
       align-items: center; }
       @media only screen and (max-width: 991px) {
         .main-content__table1 .count {
-          margin-top: -100px; } }
+          margin-top: -200px; } }
       .main-content__table1 .count .count-numbers {
         background: #f6a432;
         font-family: 'CenturyGothicBold';
-        width: 40px;
-        height: 55px;
+        width: 50px;
+        height: 57px;
         color: white;
         border-radius: 10px;
         text-align: center;
@@ -177,7 +183,9 @@ body, html {
     display: flex; }
     @media only screen and (max-width: 991px) {
       .main-content__table2 {
-        width: 100%; } }
+        width: 100%;
+        justify-content: center;
+        margin-top: -160px; } }
     .main-content__table2--img {
       height: 260px;
       width: 220px;
@@ -240,9 +248,12 @@ body, html {
           font-family: 'CenturyGothic';
           text-align: center;
           justify-content: center;
-          font-size: 7px;
+          font-size: 9px;
           line-height: 2;
           text-decoration: none; }
+          @media only screen and (max-width: 991px) {
+            .main-content__table2 .form__terms a {
+              color: white; } }
       .main-content__table2 .form__fields {
         display: flex;
         flex-wrap: wrap; }
@@ -265,6 +276,9 @@ body, html {
           margin: 5px;
           width: 100%;
           font-size: 10px; }
+          @media only screen and (max-width: 991px) {
+            .main-content__table2 .form__fields input {
+              background: white; } }
         .main-content__table2 .form__fields .contact {
           width: 90%; }
       .main-content__table2 .form .submit {
@@ -284,6 +298,11 @@ body, html {
           font-size: 9px;
           font-weight: bold;
           letter-spacing: 1px; }
+          @media only screen and (max-width: 991px) {
+            .main-content__table2 .form .submit input {
+              width: 164px;
+              padding: 9px 9px;
+              font-size: 12px; } }
 
 .container2 {
   background-image: url(../img/Background-2.png);
@@ -297,20 +316,39 @@ body, html {
   padding: 0;
   margin: 0;
   overflow-y: hidden; }
+  @media only screen and (max-width: 991px) {
+    .container2 {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 13px;
+      height: auto;
+      width: auto;
+      background: none;
+      overflow-y: auto;
+      margin-top: 20px; } }
   .container2__appLoro {
     width: 600px; }
+    @media only screen and (max-width: 991px) {
+      .container2__appLoro {
+        width: 100%;
+        order: 2; } }
     .container2__appLoro .phoneLoro img {
       max-width: 620px; }
+      @media only screen and (max-width: 991px) {
+        .container2__appLoro .phoneLoro img {
+          width: 100%; } }
   .container2__description {
     display: flex;
     flex-wrap: wrap;
-    max-width: 650px;
     max-width: 650px; }
     .container2__description--descriptionTitle {
       color: #00c196;
       font-size: 1.3rem;
       line-height: 0.9;
       font-family: 'CenturyGothicBold'; }
+      @media only screen and (max-width: 991px) {
+        .container2__description--descriptionTitle {
+          font-size: 1rem; } }
     .container2__description--list {
       box-sizing: content-box; }
       .container2__description--list ul {

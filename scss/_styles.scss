@@ -64,9 +64,10 @@ body, html {
 
         .title{
             color: $color-green;            
-            font-size: 1.4rem;
+            font-size: 1.7rem;
             font-family: 'CenturyGothicBold';
             height: 35px;
+            width: 100%;
             margin-top: 20px 0;
             @media #{$mediaTablet}{
                 font-size: 1rem;
@@ -82,9 +83,11 @@ body, html {
         .sub-content{
             color:$color-grey;
             font-family: 'Roboto-bold';
-            font-size: 0.9rem;
+            font-size: 1.2rem;
             letter-spacing: 1px;
-            margin-top: 20px;
+            margin-top: 45px;
+            width: 100%;
+
             
             @media #{$mediaDesktop}{
                 display: block;
@@ -100,13 +103,20 @@ body, html {
 
         .sub-content--mobile{
             @media #{$mediaTablet}{
+                display: block !important;
                 color:$color-grey;
                 font-family: 'Roboto-bold';
                 font-size: 15px ;
                 letter-spacing: 1px;
-                margin-top: -50px;
+                margin-top: -100px;
                 text-align: center;
+                
 
+            }
+
+            @media #{$mediaXL}{
+                display: none;
+                
             }
         }
 
@@ -115,14 +125,14 @@ body, html {
             align-items: center;
 
             @media #{$mediaTablet}{
-                margin-top: -100px;
+                margin-top: -200px;
             }
 
             .count-numbers{
                 background: $color-yellow;
                 font-family: 'CenturyGothicBold';
-                width: 40px;
-                height: 55px;
+                width: 50px;
+                height: 57px;
                 color: white;
                 border-radius: 10px;
                 text-align: center;
@@ -204,6 +214,8 @@ body, html {
         display: flex;
         @media #{$mediaTablet}{
             width: 100%;
+            justify-content: center;
+            margin-top: -160px;
         }
 
         &--img{
@@ -287,9 +299,13 @@ body, html {
                     font-family: 'CenturyGothic';
                     text-align: center;
                     justify-content: center;
-                    font-size: 7px;
+                    font-size: 9px;
                     line-height: 2;
                     text-decoration: none;
+
+                    @media #{$mediaTablet}{
+                        color: white
+                    }
                 }
             }
 
@@ -324,6 +340,11 @@ body, html {
                     width: 100%;
                     font-size: 10px;
 
+                    @media #{$mediaTablet}{
+                        background: white;
+                        
+                    }
+
                 }
                 .contact{
                     width: 90%
@@ -347,6 +368,13 @@ body, html {
                     font-size: 9px;
                     font-weight: bold;
                     letter-spacing: 1px;
+
+                    @media #{$mediaTablet}{
+                        width: 164px;
+                        padding: 9px 9px;
+                        font-size: 12px
+                        
+                    }
                                         
                  }
             }
@@ -368,14 +396,33 @@ body, html {
     margin: 0;
     overflow-y: hidden;
 
+    @media #{$mediaTablet}{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 13px;
+        height: auto;
+        width: auto;
+        background: none;
+        overflow-y: auto;
+        margin-top: 20px;
+        
+    }
+
     &__appLoro {
         // background: yellow;
         width: 600px;
 
+        @media #{$mediaTablet}{
+          width: 100%;
+          order: 2
+        }
+
         .phoneLoro{
             img{
                 max-width: 620px;
-               
+                @media #{$mediaTablet}{
+                    width: 100%;
+                }
             }
         }
     }
@@ -384,7 +431,7 @@ body, html {
         // align-self: flex-start;
         // background: red;
         flex-wrap: wrap;
-        max-width: 650px;    max-width: 650px;
+        max-width: 650px;   
         
 
         &--descriptionTitle{
@@ -392,6 +439,10 @@ body, html {
             font-size: 1.3rem;
             line-height: 0.9;
             font-family: 'CenturyGothicBold';
+
+            @media #{$mediaTablet}{
+                font-size: 1rem;
+            }
         }
         &--list{
             box-sizing: content-box;
