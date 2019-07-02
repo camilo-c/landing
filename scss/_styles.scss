@@ -70,12 +70,13 @@ body, html {
             width: 100%;
             margin-top: 20px 0;
             @media #{$mediaTablet}{
-                font-size: 1rem;
+                font-size: 5vw;
                 
             }
             h1{
                 @media #{$mediaTablet}{
                     margin: 0;
+                    text-align: center;
                     
                 } 
             }
@@ -106,7 +107,7 @@ body, html {
                 display: block !important;
                 color:$color-grey;
                 font-family: 'Roboto-bold';
-                font-size: 15px ;
+                font-size: 4.5vw;
                 letter-spacing: 1px;
                 margin-top: -100px;
                 text-align: center;
@@ -436,12 +437,12 @@ body, html {
 
         &--descriptionTitle{
             color: $color-green;
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             line-height: 0.9;
             font-family: 'CenturyGothicBold';
 
             @media #{$mediaTablet}{
-                font-size: 1rem;
+                font-size: 7vw;
             }
         }
         &--list{
@@ -453,8 +454,8 @@ body, html {
             li:before{
                 content: "";
                 display: inline-block;
-                height: 15px;
-                width: 15px;
+                height: 20px;
+                width: 20px;
                 margin-right: 10px;
                 background-image: url(../img/check.svg);
                 animation: fadein 4s;
@@ -471,10 +472,14 @@ body, html {
             }
             li{
                 color: $color-grey;
-                font-size: 1rem;
+                font-size: 1.2rem;
                 line-height: 2;
                 letter-spacing: 0.5px;
                 font-family: 'Roboto-Regular';
+
+                @media #{$mediaTablet}{
+                    line-height: 1;
+                }
 
                 &:nth-of-type(1){
                     animation: aparece-izquierda ease 3s backwards;
@@ -488,14 +493,34 @@ body, html {
 
             }
         }
-
-
-        
     }
+    &__linlksMobile{
+        display: none;
+        @media #{$mediaTablet}{
+            order: 3;
+            display: flex;
+            width: 100%;
+            position: relative;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        .link{
+            order: 2;
+
+            a img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+        .arrow{
+            width: 70px;
+            transform: rotate(180deg);
+            margin: auto;
+        }
+    }
+
     
 }
-@media only screen and (max-width: 1000px) {
-    .illumination {
-      display: none;
-    }
-}
+
