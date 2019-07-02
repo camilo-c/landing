@@ -398,12 +398,16 @@ body, html {
     overflow-y: hidden;
 
     @media #{$mediaTablet}{
+        background-image: url(../img/background--mobile.png);
+        background-repeat: no-repeat;
+        background-size: 20%;
+        background-position: 0% 96%;
         display: flex;
         flex-wrap: wrap;
         padding: 0 13px;
         height: auto;
         width: auto;
-        background: none;
+        // background: none;
         overflow-y: auto;
         margin-top: 20px;
         
