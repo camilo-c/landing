@@ -286,6 +286,7 @@ body, html {
         position: relative; }
         .main-content__table2 .form .submit input {
           position: absolute;
+          cursor: pointer;
           border: none;
           background: #f6a432;
           font-family: 'CenturyGothic';

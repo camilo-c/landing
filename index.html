@@ -35,11 +35,11 @@
                     <div class="count-numbers">0</div>
                     <div class="count-numbers">0</div>
                     <div class="count-numbers count-numbers--center">1</div>
-                    <div class="count-numbers count-numbers">0</div>
-                    <div class="count-numbers count-numbers">0</div>
+                    <div class="count-numbers ">0</div>
+                    <div class="count-numbers ">0</div>
                     <div class="count-numbers count-numbers--center">0</div>
-                    <div class="count-numbers count-numbers">0</div>
-                    <div class="count-numbers count-numbers"><span id="count">0</span></div>
+                    <div class="count-numbers ">0</div>
+                    <div class="count-numbers counts"><span id="count">0</span></div>
                 </div>
 
                 <div class="links">
@@ -92,7 +92,7 @@
                         <div class="form__terms">
                             <a href="#">Aplican términos y condiciones </a>
                         </div>
-                        <div class="submit">
+                        <div class="submit btn">
                             <input type="submit" value="¡Quiero ganar!" id="form_button" />
                         </div>
                     </form>
@@ -150,6 +150,19 @@
                 $('html, body').animate({ scrollTop: destino.offset().top }, 1000);
                 return false;
             });
+
+            var counts = 0
+            $(".submit").click(function(){
+                counts += +1
+                if(counts < 10){
+                    counts1 = "0" + counts;
+                }else{
+                    counts1 = counts
+                }
+                $(".counts").text(counts1)
+            })
+
+
         });
 
         // moveImg
@@ -158,6 +171,15 @@
                 y = e.pageY;
             $('.phoneLoro').css('transform', 'translate(' + x / -50 + 'px, ' + y / -50 + 'px)');
         });
+
+        //counter
+            let  i = 0
+            function sumar(){
+                contador++
+                document.getElementsByClassName("form_button").innerHTML = contador;
+            }
+
+
     </script>
 
 </body>
